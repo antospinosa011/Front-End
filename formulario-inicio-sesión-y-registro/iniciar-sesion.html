@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="iniciar-sesion.css" />
+    <link
+      rel="icon"
+      href="https://png.pngtree.com/png-vector/20191122/ourmid/pngtree-beautiful-create-user-glyph-vector-icon-png-image_2002855.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Iniciar Sesión</title>
+  </head>
+  <header>
+    <div class="inicio">
+      <h1 class="title1">¡inicia sesión</h1>
+      <p class="parrafo1">para acceder a todo nuestro contenido!</p>
+    </div>
+  </header>
+  <body>
+    <p>
+      <img src="./images/user.png" class="user" alt="user_login" />
+    </p>
+    <br />
+    <form action="https://formspree.io/f/moqrywln" class="form2" method="POST">
+      <div class="formulario1">
+        <br />
+
+        <label for="user">
+          <span class="material-symbols-outlined">person</span>
+          Usuario</label
+        >
+
+        <br />
+        <input
+          type="text"
+          name="usuario"
+          id="user"
+          placeholder="Ingrese su usuario..."
+          required
+        />
+        <br />
+        <br />
+        <label for="pass">
+          <span class="material-symbols-outlined"> lock </span>
+          Contraseña</label
+        >
+        <br />
+        <input
+          type="password"
+          name="contra"
+          id="pass"
+          placeholder="Ingrese su contraseña..."
+          required
+        />
+
+        <a href="" class="contra">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button type="submit">Inicia Sesión</button>
+      <p>
+        ¿No tienes una cuenta?
+        <br />
+        <br />
+        <a href="registrarse.html" target="_blank">Regístrate</a>
+      </p>
+    </form>
+  </body>
+</html>
