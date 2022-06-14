@@ -27,7 +27,7 @@ Esta es una solución al [Desafío NFT preview card component on Frontend Mentor
 
 ### Lo que aprendí
 
-Usé esta sección para practicar flexbox, objet fit y aceitar el uso de las principales etiquetas en html y css.
+Usé esta sección para practicar flexbox, objet fit, filtros en imágenes y aceitar el uso de las principales etiquetas en html y css.
 
 ## Autora
 
