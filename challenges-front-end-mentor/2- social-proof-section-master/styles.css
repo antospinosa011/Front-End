@@ -1,0 +1,166 @@
+/* Fuente */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+/* Var */
+:root {
+  /* Colors */
+  --VeryDark: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayish: hsl(303, 10%, 53%);
+  --LightGrayish: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font */
+  --Font: "League Spartan", sans-serif;
+}
+
+/* Generales */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 25px;
+  font-family: var(--Font);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor {
+  width: 90%;
+  height: 80%;
+}
+
+/* SUPERIOR */
+.superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Superior DERECHO: Usuarios */
+h1 {
+  font-weight: 700;
+  font-size: 35px;
+  color: var(--VeryDark);
+}
+.users p {
+  font-size: 12px;
+  color: var(--DarkGrayish);
+}
+
+/* Superior IZQUIERDO: Rated */
+.rated {
+  width: 50%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.r-one,
+.r-two,
+.r-three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 330px;
+  height: 40px;
+  font-size: 13px;
+  color: var(--VeryDark);
+  background-color: var(--LightGrayish);
+  border-radius: 8px;
+}
+
+.r-two {
+  margin-left: 40px;
+}
+
+.r-three {
+  margin-left: 80px;
+}
+
+/* INFERIOR */
+.cards {
+  margin-top: 30px;
+  display: flex;
+  width: 750px;
+  height: 140px;
+  gap: 15px;
+}
+
+.card1,
+.card2,
+.card3 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--VeryDark);
+  border-radius: 8px;
+}
+
+/* Position cards */
+.card2 {
+  margin-top: 10px;
+}
+
+.card3 {
+  margin-top: 20px;
+}
+
+/* Photo - Name - Verified */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.photo img {
+  width: 30px;
+  border-radius: 50px;
+}
+
+h5 {
+  color: var(--White);
+}
+
+.verified {
+  color: var(--SoftPink);
+  font-weight: 300;
+  opacity: 0.8;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.msj {
+  margin-left: 20px;
+  margin-right: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--White);
+  opacity: 0.8;
+}
+
+.msj p {
+  margin-top: 0px;
+}
+
+/* Contact*/
+.attribution {
+  height: 100%;
+  margin-top: 90px;
+  font-size: 8px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
