@@ -1,0 +1,357 @@
+/* -------------------- FUENTES ------------------*/
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Open+Sans:wght@300;400;600&family=Oswald:wght@200;300;400&display=swap");
+
+/* ------------------- UNIVERSAL -----------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente. */
+}
+
+/* ---------------------- BODY -------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* -------------- CONTENEDOR PRINCIPAL ------------*/
+.content {
+  width: 100%;
+  /* alto mínimo: puede tener un alto más grande y se hará un scroll.*/
+  min-height: 100vh;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 70px auto;
+  grid-template-rows: 60px 60px auto;
+  grid-template-areas:
+    "header header"
+    "nav-lateral nav-superior"
+    "nav-lateral main"
+    "nav-lateral footer";
+
+  transition: all 0.5s ease;
+}
+
+.content.active {
+  grid-template-columns: 250px auto;
+}
+
+/* ----------------------------------------------*/
+/* ------------------- HEADER -------------------*/
+/* ----------------------------------------------*/
+
+.header {
+  /* Disposición del Header con respecto al contenedor(página) */
+  grid-area: header;
+  padding: 0px 15px;
+
+  /* Distribución de los elementos dentro del Header */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo busqueda opciones";
+  align-items: center;
+  gap: 30px;
+
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+/* ---------- LOGO, BÚSQUEDA Y OPCIONES ----------*/
+
+/* -------------------- LOGO ---------------------*/
+.logo {
+  grid-area: logo;
+}
+
+/* ------------- BOTON BARRA LATERAL -------------*/
+.logo .boton-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 21px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo .boton-nav:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+/* ---------------- ICONO YOUTUBE ----------------*/
+.logo .icono .fa-brands {
+  cursor: pointer;
+  font-size: 27px;
+  position: relative;
+  top: 2.5px;
+}
+
+/* ------------------- YOUTUBE -------------------*/
+.logo .icono span {
+  font-family: "League Gothic", sans-serif;
+  font-size: 28px;
+  color: black;
+  position: relative;
+  top: 2px;
+}
+
+.icono {
+  color: red;
+}
+/* ------------------- BÚSQUEDA ------------------*/
+.busqueda {
+  grid-area: busqueda;
+  text-align: center;
+}
+
+/* -------------------- INPUT --------------------*/
+.busqueda input {
+  padding-left: 15px;
+  min-width: 60%;
+  height: 39px;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgb(0, 106, 255);
+}
+
+/* ------------ BOTÓN BÚSQUEDA Y MICRO -----------*/
+.busqueda button {
+  height: 38.65px;
+  width: 50px;
+  margin-left: 0px;
+
+  border-radius: 0px;
+  border: 1px solid rgb(170, 170, 170);
+  font-size: 15px;
+
+  cursor: pointer;
+
+  position: relative;
+  left: -5px;
+}
+
+.busqueda .micro {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100%;
+  background: none;
+  cursor: pointer;
+}
+
+.busqueda .micro:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+/* ---------- VIDEO, APP, NOTIFICACIONES  --------*/
+.opciones {
+  grid-area: opciones;
+  text-align: right;
+}
+
+.opciones button {
+  width: 39px;
+  height: 40px;
+
+  border: none;
+  background: none;
+
+  font-size: 15px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.opciones button:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+/* ------------------- IMAGEN  -------------------*/
+.opciones .photo .img {
+  margin: 0 10px;
+  width: 26px;
+  height: 28px;
+  display: inline-block;
+
+  position: relative;
+  top: 8px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+/* -----------------------------------------------*/
+/* ---------------- BARRA SUPERIOR----------------*/
+/* -----------------------------------------------*/
+
+.nav-superior {
+  grid-area: nav-superior;
+  margin: 5px 10px 0px 10px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+/* --CONTENEDORES DE BOTONES (BUSQUEDAS Y FLECHAS)--*/
+.nav-superior .contenedor-principal {
+  display: flex;
+  align-items: center;
+}
+
+.nav-superior .contenedor-busqueda {
+  width: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+/* ------------------- BOTONES -------------------*/
+.nav-superior .contenedor-busqueda .busqueda .boton {
+  margin: 10px 12px 0px 10px;
+  height: 30px;
+  min-width: 12%;
+
+  border-radius: 20px;
+
+  color: rgb(64, 64, 64);
+  background: rgb(239, 239, 239);
+  border: 1px solid rgb(194, 194, 194);
+
+  cursor: pointer;
+
+  transition: 0.2s ease all;
+}
+
+.nav-superior .contenedor-busqueda .busqueda .boton:hover {
+  background-color: rgb(190, 190, 190);
+  color: black;
+}
+
+/* --------- FLECHAS IZQUIERDA Y DERECHA ----------*/
+.nav-superior .contenedor-principal .flecha-izq,
+.flecha-der {
+  margin: 10px 12px 0px 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 33px;
+  height: 30px;
+  transition: 0.3 ease all;
+  border-radius: 50%;
+}
+
+.nav-superior .contenedor-busqueda .busqueda {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* -----------------------------------------------*/
+/* ----------------- BARRA LATERAL----------------*/
+/* -----------------------------------------------*/
+
+.nav-lateral {
+  grid-area: nav-lateral;
+  overflow: hidden;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-lateral a {
+  display: block;
+  padding: 10px;
+  margin-left: 8px;
+  margin-right: 15px;
+  min-width: 300px;
+}
+
+.nav-lateral a i {
+  margin: 0px 24px 0px 10px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.nav-lateral .inicio {
+  background-color: rgb(207, 207, 207);
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.nav-lateral .linkedin {
+  margin-left: 12px;
+  position: absolute;
+  bottom: -150px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.nav-lateral .linkedin:hover {
+  background: none;
+  color: blue;
+}
+
+.nav-lateral a:hover {
+  background-color: rgb(207, 207, 207);
+}
+
+.separador {
+  margin: 15px 5px 15px 0px;
+  color: rgb(207, 207, 207);
+}
+
+/* -----------------------------------------------*/
+/* --------------------- MAIN --------------------*/
+/* -----------------------------------------------*/
+
+.main {
+  grid-area: main;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: space-around;
+
+  background-color: rgb(249, 249, 249);
+}
+
+.main .video {
+  margin: 30px 40px 30px 10px;
+  transition: transform 0.3s;
+}
+
+.main .video:hover {
+  transition-delay: 1s;
+  transform: scale(1.2);
+}
+
+/* -----------------------------------------------*/
+/* -------------------- FOOTER -------------------*/
+/* -----------------------------------------------*/
+
+footer {
+  grid-area: footer;
+
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  justify-items: center;
+
+  margin-bottom: 20px;
+  background-color: rgb(249, 249, 249);
+  border-top: 1px solid rgb(207, 207, 207);
+}
+
+footer a {
+  margin: 15px 30px 0px 0px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+footer a:hover {
+  color: rgb(71, 71, 71);
+}
