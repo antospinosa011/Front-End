@@ -44,7 +44,7 @@ body {
 .header {
   /* Disposición del Header con respecto al contenedor(página) */
   grid-area: header;
-  padding: 0px 15px;
+  padding: 10px 15px;
 
   /* Distribución de los elementos dentro del Header */
   display: grid;
@@ -52,7 +52,12 @@ body {
   grid-template-areas: "logo busqueda opciones";
   align-items: center;
   gap: 30px;
-
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background-color: white;
   border-bottom: 1px solid rgb(207, 207, 207);
 }
 
@@ -132,7 +137,6 @@ input:focus {
 
   cursor: pointer;
 
-  position: relative;
   left: -5px;
 }
 
@@ -194,6 +198,7 @@ input:focus {
   grid-area: nav-superior;
   margin: 5px 10px 0px 10px;
   border-bottom: 1px solid rgb(207, 207, 207);
+  background-color: white;
 }
 
 /* --CONTENEDORES DE BOTONES (BUSQUEDAS Y FLECHAS)--*/
@@ -315,7 +320,7 @@ a {
   justify-content: center;
   grid-template-columns: repeat(3, 320px);
   justify-content: space-around;
-
+  z-index: 0;
   background-color: rgb(249, 249, 249);
 }
 
