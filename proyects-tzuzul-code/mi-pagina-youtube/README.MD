@@ -42,7 +42,7 @@ Se utilizó el lenguaje de JavaScript para añadir funcionalidad a algunos boton
 
 Usé esta sección para practicar:
 
-- Aceitar el uso de las principales etiquetas en HTML;
+- El uso de las principales etiquetas en HTML;
 - Display:Flex y Grid;
 - Transiciones;
 - Implementación de z-index;
